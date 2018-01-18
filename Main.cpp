@@ -3,16 +3,9 @@ using namespace std;
 
 int main()
 {
-	cout << "Hello team16, Please press enter to continue with this exercise" << endl;
-
-	//cin.ignore() allows command prompt to stay up until a key is pressed
-	cin.ignore();
-
-	//I'll break yo code with this line' --> fixed it
-
 	int firstNumber, secondNumber, sumOfTwoNumbers;
 
-	cout << "Enter two integers: ";
+	cout << "Hello team16, Enter two integers: " << endl;
 	cin >> firstNumber >> secondNumber;
 
 	// sum of two numbers in stored in variable sumOfTwoNumbers
@@ -20,6 +13,8 @@ int main()
 
 	// Prints sum 
 	cout << firstNumber << " + " << secondNumber << " = " << sumOfTwoNumbers;
+
+	cin.ignore();
 
 	return 0;
 }
