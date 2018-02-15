@@ -10,6 +10,7 @@ int trigger2 = 4;
 int echo2 = 5;
 int motor1 = 1;
 int motor2 = 3;
+int motor3 = 6;
 
 
 int main()
@@ -27,20 +28,31 @@ int main()
         if (sonar.distance1(30000) < 10.0)	//sonar1 and motor1
 		{
 			digitalWrite (motor1, HIGH);
+			//digitalWrite (motor2, LOW);
 		}
 			else
 				{
 					digitalWrite (motor1, LOW);
 				}
         
-        if (sonar.distance2(30000) < 20.0)	//sonar 2 and motor2
+        if (sonar.distance2(30000) < 10.0)	//sonar 2 and motor2
 		{
 			digitalWrite (motor2, HIGH);
+			//digitalWrite (motor1, LOW)
 		}
 			else
 				{
 					digitalWrite (motor2, LOW);
 				}
+		if ((sonar.distance2(30000) < 10.0) && (sonar.distance1(30000) < 10.0))
+		{
+			digitalWrite (motor3, HIGH);
+		}
+			else
+				{
+					digitalWrite (motor3, LOW);
+				}
+			
 	}
     
 

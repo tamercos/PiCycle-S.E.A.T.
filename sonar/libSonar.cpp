@@ -16,10 +16,12 @@ void Sonar::init(int trigger1, int echo1, int trigger2, int echo2, int motor1, i
     pinMode(echo2, INPUT);
     pinMode(motor1, OUTPUT);
     pinMode(motor2, OUTPUT);
+    pinMode(motor3, OUTPUT);
     digitalWrite(trigger1, LOW);
     digitalWrite(trigger2, LOW);
     digitalWrite(motor1, LOW);
     digitalWrite(motor2, LOW);
+    digitalWrite(motor3, LOW)
     delay(500);
 }
 
@@ -31,17 +33,17 @@ void Sonar::recordPulseLength1()	//distance measurements for 1st sonar
     endTimeUsec1 = micros();
 }
 
-double Sonar::distance1(int timeout)
+double Sonar::distance1(int timeout1)
 {
     delay(10);
 
     digitalWrite(trigger1, HIGH);
-    delayMicroseconds(100);
+    delayMicroseconds(1000000);
     digitalWrite(trigger1, LOW);
 
     now1=micros();
 
-    while (digitalRead(echo1) == LOW && micros()-now1<timeout);
+    while (digitalRead(echo1) == LOW && micros()-now1<timeout1);
     recordPulseLength1();
 
     travelTimeUsec1 = endTimeUsec1 - startTimeUsec1;
@@ -57,7 +59,7 @@ void Sonar::recordPulseLength2()	//distance measurment for 2nd sonar
     endTimeUsec2 = micros();
 }
 
-double Sonar::distance2(int timeout)
+double Sonar::distance2(int timeout2)
 {
     delay(10);
 
@@ -67,7 +69,7 @@ double Sonar::distance2(int timeout)
 
     now2=micros();
 
-    while (digitalRead(echo2) == LOW && micros()-now2<timeout);
+    while (digitalRead(echo2) == LOW && micros()-now2<timeout2);
     recordPulseLength2();
 
     travelTimeUsec2 = endTimeUsec2 - startTimeUsec2;
