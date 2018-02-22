@@ -40,10 +40,8 @@ void Sonar::recordPulseLength1()
 
 double Sonar::distance1(int timeout1)
 {
-    delay(10);
-
     digitalWrite(trigger1, HIGH);
-    delayMicroseconds(1000000);		//1Hz sample rate
+    delayMicroseconds(10);		//100kHz sample rate
     digitalWrite(trigger1, LOW);
 
     now1=micros();
@@ -67,10 +65,8 @@ void Sonar::recordPulseLength2()
 
 double Sonar::distance2(int timeout2)
 {
-    delay(10);
-
     digitalWrite(trigger2, HIGH);
-    delayMicroseconds(1000000);		//1Hz sample rate
+    delayMicroseconds(10);		//100kHz sample rate
     digitalWrite(trigger2, LOW);
 
     now2=micros();
@@ -80,7 +76,7 @@ double Sonar::distance2(int timeout2)
 
     travelTimeUsec2 = endTimeUsec2 - startTimeUsec2;
     distanceMeters2 = 100*((travelTimeUsec2/1000000.0)*340.29)/2;
-
+    
     return distanceMeters2;
 }
 
@@ -94,10 +90,8 @@ void Sonar::recordPulseLength3()
 
 double Sonar::distance3(int timeout3)
 {
-    delay(10);
-
     digitalWrite(trigger3, HIGH);
-    delayMicroseconds(1000000);		//1Hz sample rate
+    delayMicroseconds(10);		//100kHz sample rate
     digitalWrite(trigger3, LOW);
 
     now3=micros();

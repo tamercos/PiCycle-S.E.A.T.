@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <wiringPi.h>
 #include "libSonar.h"
 
@@ -13,9 +14,9 @@ int trigger2 = 4;
 int echo2 = 5;
 int motor2 = 3;
 
-int trigger3 = 4;	//These pins are to change upon arrival of RPi 3!!!
-int echo3 = 2;
-int motor3 = 6;
+int trigger3 = 21;	//These pins are to change upon arrival of RPi 3!!!
+int echo3 = 22;
+int motor3 = 23;
 
 
 int main()
@@ -53,7 +54,7 @@ int main()
 				}
 			
 			
-		cout << "1st distance is " << sonar.distance1(30000) << " cm : " << "2nd distance is " << sonar.distance2(30000) << " cm : " << "3rd distance is " << sonar.distance3(30000) << "cm" << endl;
+		cout << "Left: " << setprecision(1) << sonar.distance1(30000) << " cm // " << "Back: " << setprecision (1) << sonar.distance2(30000) << " cm // " << "Right: " << setprecision(1) << sonar.distance3(30000) << "cm" << endl;
 	}    
 
 }
