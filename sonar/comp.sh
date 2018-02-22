@@ -1,3 +1,3 @@
 #!/bin/bash
-g++ libSonarSample.cpp -o test -lwiringPi libSonar.cpp
-./test
+g++ PiCycleSEAT.cpp -o run -lwiringPi libSonar.cpp
+./run
