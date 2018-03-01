@@ -7,6 +7,7 @@ HC-SR04 ultrasonic sensors placed under the seat of the bicycle facing backwards
 
 ## Parts used
 - 3x HC-SR04 ultrasonic sensors
+- 3x Seeed mini vibration motor 3V 2.0mm circular
 - 3D printed parts found under the "PiCycleSEAT 3D Print" folder
 - 5x M2.5 x 8mm screws for the housing lid
 - 4x M2.5 x 6mm screws for Raspberry Pi
