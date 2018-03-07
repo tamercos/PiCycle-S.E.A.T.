@@ -4,7 +4,7 @@
 
 Sonar::Sonar(){}
 
-void Sonar::init(int trigger1, int echo1, int trigger2, int echo2, int trigger3, int echo3, int motor1, int motor2, int motor3)
+void Sonar::init(int trigger1, int echo1, int motor1, int trigger2, int echo2, int motor2,int trigger3, int echo3, int motor3)
 {
     this->trigger1=trigger1;
     this->echo1=echo1;
@@ -15,9 +15,11 @@ void Sonar::init(int trigger1, int echo1, int trigger2, int echo2, int trigger3,
     pinMode(trigger1, OUTPUT);			//defining trigger, echo and motor pins as input or output
     pinMode(echo1, INPUT);
     pinMode(motor1, OUTPUT);
+    
     pinMode(trigger2, OUTPUT);
     pinMode(echo2, INPUT);
     pinMode(motor2, OUTPUT);
+    
     pinMode(trigger3, OUTPUT);
     pinMode(echo3, INPUT);
     pinMode(motor3, OUTPUT);

@@ -6,17 +6,17 @@
 using namespace std;
 
 //***Decleration of wpi pin connections***
-int trigger1 = 7;
-int echo1 = 0;
-int motor1 = 1;
+int trigger1 = 0;
+int echo1 = 2;
+int motor1 = 3;
 
-int trigger2 = 4;
-int echo2 = 5;
-int motor2 = 3;
+int trigger2 = 23;
+int echo2 = 24;
+int motor2 = 25;
 
-int trigger3 = 21;	//These pins are to change upon arrival of RPi 3!!!
-int echo3 = 22;
-int motor3 = 23;
+int trigger3 = 27;
+int echo3 = 28;
+int motor3 = 29;
 
 
 int main()
@@ -30,7 +30,7 @@ int main()
     while(1)
     {
         
-        if (sonar.distance1(30000) < 10.0){				//motor1 condition for activation
+        if (sonar.distance1(3000) < 10.0){				//motor1 condition for activation
 			digitalWrite (motor1, HIGH);
 		}
 			else{
@@ -38,7 +38,7 @@ int main()
 				}
         
         
-        if (sonar.distance2(30000) < 10.0){				//motor2 condition for activation
+        if (sonar.distance2(3000) < 10.0){				//motor2 condition for activation
 			digitalWrite (motor2, HIGH);
 		}
 			else{
@@ -46,7 +46,7 @@ int main()
 				}
 				
 				
-		if (sonar.distance3(30000) < 10.0){				//motor3 condition for activation
+		if (sonar.distance3(3000) < 10.0){				//motor3 condition for activation
 			digitalWrite (motor3, HIGH);
 		}
 			else{
@@ -54,7 +54,7 @@ int main()
 				}
 			
 			
-		cout << "Left: " << setprecision(1) << sonar.distance1(30000) << " cm // " << "Back: " << setprecision (1) << sonar.distance2(30000) << " cm // " << "Right: " << setprecision(1) << sonar.distance3(30000) << "cm" << endl;
+		cout << "Left: " << setprecision(3) << sonar.distance1(3000) << " cm // " << "Back: " << setprecision(3) << sonar.distance2(3000) << " cm // " << "Right: " << setprecision(3) << sonar.distance3(30000) << "cm" << endl;
 	}    
 
 }

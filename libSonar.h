@@ -5,7 +5,7 @@ class Sonar
 {
   public:
     Sonar();
-    void init(int trigger1, int echo1, int trigger2, int echo2, int trigger3, int echo3, int motor1, int motor2, int motor3);
+    void init(int trigger1, int echo1, int motor1, int trigger2, int echo2, int motor2, int trigger3, int echo3, int motor3);
     double distance1(int timeout1);
     double distance2(int timeout2);
     double distance3(int timeout3);
