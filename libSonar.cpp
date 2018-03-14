@@ -15,11 +15,9 @@ void Sonar::init(int trigger1, int echo1, int motor1, int trigger2, int echo2, i
     pinMode(trigger1, OUTPUT);			//defining trigger, echo and motor pins as input or output
     pinMode(echo1, INPUT);
     pinMode(motor1, OUTPUT);
-    
     pinMode(trigger2, OUTPUT);
     pinMode(echo2, INPUT);
     pinMode(motor2, OUTPUT);
-    
     pinMode(trigger3, OUTPUT);
     pinMode(echo3, INPUT);
     pinMode(motor3, OUTPUT);
@@ -31,8 +29,9 @@ void Sonar::init(int trigger1, int echo1, int motor1, int trigger2, int echo2, i
     digitalWrite(motor3, LOW);
     delay(500);
 }
-
-//***Distance Measurement for 1st Sonar***
+/*  **********************************
+	Distance Measurement for 1st Sonar
+	**********************************/
 void Sonar::recordPulseLength1()
 {
     startTimeUsec1 = micros();
@@ -43,7 +42,7 @@ void Sonar::recordPulseLength1()
 double Sonar::distance1(int timeout1)
 {
     digitalWrite(trigger1, HIGH);
-    delayMicroseconds(10);		//100kHz sample rate
+    delayMicroseconds(10);
     digitalWrite(trigger1, LOW);
 
     now1=micros();
@@ -57,7 +56,9 @@ double Sonar::distance1(int timeout1)
     return distanceMeters1;
 }
 
-//***Distance Measurement for 2nd Sonar***
+/*  **********************************
+	Distance Measurement for 2nd Sonar
+	**********************************/
 void Sonar::recordPulseLength2()
 {
     startTimeUsec2 = micros();
@@ -68,7 +69,7 @@ void Sonar::recordPulseLength2()
 double Sonar::distance2(int timeout2)
 {
     digitalWrite(trigger2, HIGH);
-    delayMicroseconds(10);		//100kHz sample rate
+    delayMicroseconds(10);
     digitalWrite(trigger2, LOW);
 
     now2=micros();
@@ -82,7 +83,9 @@ double Sonar::distance2(int timeout2)
     return distanceMeters2;
 }
 
-//***Distance Measurement for 3rd Sonar***
+/*  **********************************
+	Distance Measurement for 3rd Sonar
+	**********************************/
 void Sonar::recordPulseLength3()
 {
     startTimeUsec3 = micros();
@@ -93,7 +96,7 @@ void Sonar::recordPulseLength3()
 double Sonar::distance3(int timeout3)
 {
     digitalWrite(trigger3, HIGH);
-    delayMicroseconds(10);		//100kHz sample rate
+    delayMicroseconds(10);
     digitalWrite(trigger3, LOW);
 
     now3=micros();

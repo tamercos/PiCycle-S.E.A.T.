@@ -23,6 +23,7 @@ class Sonar
     int motor1;
     int motor2;
     int motor3;
+    int detectRange;
     volatile long startTimeUsec1;
     volatile long startTimeUsec2;
     volatile long startTimeUsec3;
