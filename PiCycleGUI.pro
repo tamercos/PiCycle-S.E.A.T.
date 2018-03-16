@@ -31,3 +31,10 @@ HEADERS  += mainwindow.h \
     libSonar.h
 
 FORMS    += mainwindow.ui
+
+
+# So wiringPi include files can be found during compile
+INCLUDEPATH += /usr/local/include
+
+# To link the wiringPi library when making the executable
+LIBS    += -L/usr/local/lin -lwiringPi

@@ -6,7 +6,18 @@ MainWindow::MainWindow() : sampleRate(10)
 {
     spinbox = new QSpinBox;
     spinbox->setValue(sampleRate);
-    connect( spinbox, SIGNAL(valueChanged(int)), sampleRate, SLOT(setSampleRate(int)) );
+    connect( spinbox, SIGNAL(valueChanged(int)), SLOT(setSampleRate(int)) );
+
+
+    // set up the layout
+    vLayout = new QVBoxLayout;
+    vLayout->addWidget(spinbox);
+
+    hLayout = new QHBoxLayout;
+    hLayout->addLayout(vLayout);
+
+    setLayout(hLayout);
+
 }
 
 void MainWindow::setSampleRate(int sampleRate)

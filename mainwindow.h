@@ -21,8 +21,6 @@ public:
 
     ~MainWindow();
 
-    void timerEvent( QTimerEvent * );
-
 
 public slots:
     void setSampleRate(int sampleRate);
@@ -35,14 +33,7 @@ private:
     QVBoxLayout  *vLayout;  // vertical layout
     QHBoxLayout  *hLayout;  // horizontal layout
 
-    static const int plotDataSize = 100;
-
-    // data arrays for the plot
-    double xData[plotDataSize];
-    double yData[plotDataSize];
-
     int sampleRate;
-    int count;
 };
 
 #endif // MAINWINDOW_H
