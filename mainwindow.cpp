@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QSlider>
+#include <QSpinBox>
 
 MainWindow::MainWindow() : sampleRate(10)
 {
