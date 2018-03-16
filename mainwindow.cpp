@@ -1,14 +1,21 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QSlider>
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+MainWindow::MainWindow() : sampleRate(10)
 {
-    ui->setupUi(this);
+    spinbox = new QSpinBox;
+    spinbox->setValue(sampleRate);
+    connect( spinbox, SIGNAL(valueChanged(int)), sampleRate, SLOT(setSampleRate(int)) );
 }
+
+void MainWindow::setSampleRate(int sampleRate)
+{
+    this->sampleRate = sampleRate;
+}
+
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+
 }

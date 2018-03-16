@@ -25,8 +25,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    libSonar.cpp \
-    PiCycleSEAT.cpp
+    libSonar.cpp
 
 HEADERS  += mainwindow.h \
     libSonar.h

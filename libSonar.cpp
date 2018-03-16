@@ -29,9 +29,9 @@ void Sonar::init(int trigger1, int echo1, int motor1, int trigger2, int echo2, i
     digitalWrite(motor3, LOW);
     delay(500);
 }
-/*  **********************************
-	Distance Measurement for 1st Sonar
-	**********************************/
+/***********************************
+  Distance Measurement for 1st Sonar
+ ***********************************/
 void Sonar::recordPulseLength1()
 {
     startTimeUsec1 = micros();
@@ -56,9 +56,9 @@ double Sonar::distance1(int timeout1)
     return distanceMeters1;
 }
 
-/*  **********************************
-	Distance Measurement for 2nd Sonar
-	**********************************/
+/***********************************
+  Distance Measurement for 2nd Sonar
+ ***********************************/
 void Sonar::recordPulseLength2()
 {
     startTimeUsec2 = micros();
@@ -83,9 +83,9 @@ double Sonar::distance2(int timeout2)
     return distanceMeters2;
 }
 
-/*  **********************************
-	Distance Measurement for 3rd Sonar
-	**********************************/
+/***********************************
+  Distance Measurement for 3rd Sonar
+ ***********************************/
 void Sonar::recordPulseLength3()
 {
     startTimeUsec3 = micros();

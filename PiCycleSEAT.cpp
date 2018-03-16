@@ -60,7 +60,7 @@ int main()
 				}
 			
 			
-		cout << "Left: " << setprecision(3) << sonar.distance1(1000000/(sampleRate*6)) << " cm // " << "Back: " << setprecision(3) 
+        cout << "Left: " << setprecision(3) << sonar.distance1(1000000/(sampleRate*6)) << " cm // " << "Back: " << setprecision(3)
 		<< sonar.distance2(1000000/(sampleRate*6)) << " cm // " << "Right: " << setprecision(3) << sonar.distance3(1000000/(sampleRate*6)) << "cm" << endl;
 	}    
 
