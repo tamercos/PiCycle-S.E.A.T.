@@ -28,7 +28,14 @@ void Sonar::init(int trigger1, int echo1, int motor1, int trigger2, int echo2, i
     digitalWrite(motor2, LOW);
     digitalWrite(motor3, LOW);
     delay(500);
+
 }
+
+
+/**NOTE: 1 second assigned to each sensor in code will result in 6 second accumulative real time for each sample.
+        This is because each sensors has one trasmitter and one receiver, so three sensors will have a total of 6 processes.
+        i.e. 166667us will result in 1Hz sample rate, 3333us timeout will result in 50Hz sample rate*/
+
 /***********************************
   Distance Measurement for 1st Sonar
  ***********************************/
@@ -42,7 +49,7 @@ void Sonar::recordPulseLength1()
 double Sonar::distance1(int timeout1)
 {
     digitalWrite(trigger1, HIGH);
-    delayMicroseconds(10);
+    delayMicroseconds(3333);			//50 Hz sample rate
     digitalWrite(trigger1, LOW);
 
     now1=micros();
@@ -69,7 +76,7 @@ void Sonar::recordPulseLength2()
 double Sonar::distance2(int timeout2)
 {
     digitalWrite(trigger2, HIGH);
-    delayMicroseconds(10);
+    delayMicroseconds(3333);			//50 Hz sample rate
     digitalWrite(trigger2, LOW);
 
     now2=micros();
@@ -96,7 +103,7 @@ void Sonar::recordPulseLength3()
 double Sonar::distance3(int timeout3)
 {
     digitalWrite(trigger3, HIGH);
-    delayMicroseconds(10);
+    delayMicroseconds(3333);			//50 Hz sample rate
     digitalWrite(trigger3, LOW);
 
     now3=micros();

@@ -19,11 +19,6 @@ int echo3 = 28;
 int motor3 = 29;
 
 int detectRange = 10;		//set detection range of sensors (in centimeters) that will act as motor activation condition 
-
-int sampleRate = 50;		//set the sample rate of each sensor in Hz
-
-	/**NOTE: 1 second assigned to each sensor in code will result in 6 second accumulative real time sample rate
-			i.e. 166667us timeout will result in 1Hz sample rate, 3333us timeout will result in 50Hz sample rate*/
 			
 int main()
 {
@@ -36,7 +31,7 @@ int main()
     while(1)
     {
         
-        if (sonar.distance1(1000000/(sampleRate*6)) < detectRange){				//motor1 condition for activation
+        if (sonar.distance1(3333) < detectRange){				//motor1 condition for activation
 			digitalWrite (motor1, HIGH);
 		}
 			else{
@@ -44,7 +39,7 @@ int main()
 				}
         
         
-        if (sonar.distance2(1000000/(sampleRate*6)) < detectRange){				//motor2 condition for activation
+        if (sonar.distance2(3333) < detectRange){				//motor2 condition for activation
 			digitalWrite (motor2, HIGH);
 		}
 			else{
@@ -52,7 +47,7 @@ int main()
 				}
 				
 				
-		if (sonar.distance3(1000000/(sampleRate*6)) < detectRange){				//motor3 condition for activation
+		if (sonar.distance3(3333) < detectRange){				//motor3 condition for activation
 			digitalWrite (motor3, HIGH);
 		}
 			else{
@@ -60,8 +55,8 @@ int main()
 				}
 			
 			
-        cout << "Left: " << setprecision(3) << sonar.distance1(1000000/(sampleRate*6)) << " cm // " << "Back: " << setprecision(3)
-		<< sonar.distance2(1000000/(sampleRate*6)) << " cm // " << "Right: " << setprecision(3) << sonar.distance3(1000000/(sampleRate*6)) << "cm" << endl;
+        cout << "Left: " << setprecision(3) << sonar.distance1(3333) << " cm // " << "Back: " << setprecision(3)
+		<< sonar.distance2(3333) << " cm // " << "Right: " << setprecision(3) << sonar.distance3(3333) << "cm" << endl;
 	}    
 
 }
