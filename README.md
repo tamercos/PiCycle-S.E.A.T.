@@ -13,7 +13,7 @@ HC-SR04 ultrasonic sensors placed under the seat of the bicycle facing backwards
 - 4x M2.5 x 6mm screws for Raspberry Pi
 
 ## Circuitry used
-![alt text](https://github.com/tamercos/PiCycleSEAT/blob/master/Schematics/Circuit%20v1.2.PNG)
+TBC
 
 ## Run programme
 `g++ PiCycleSEAT.cpp -o run -lwiringPi libSonar.cpp`
