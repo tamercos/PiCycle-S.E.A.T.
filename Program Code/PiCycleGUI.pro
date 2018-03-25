@@ -30,7 +30,7 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     libSonar.h
 
-FORMS    += mainwindow.ui
+FORMS    +=
 
 
 # So wiringPi include files can be found during compile

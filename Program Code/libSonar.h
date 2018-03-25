@@ -5,7 +5,7 @@ class Sonar
 {
   public:
     Sonar();
-    void init(int trigger1, int echo1, int motor1, int trigger2, int echo2, int motor2, int trigger3, int echo3, int motor3);
+    void init(int trigger1, int echo1, int vibDisc1, int trigger2, int echo2, int vibDisc2, int trigger3, int echo3, int vibDisc3);
     double distance1(int timeout1);
     double distance2(int timeout2);
     double distance3(int timeout3);
@@ -20,10 +20,13 @@ class Sonar
     int echo2;
     int trigger3;
     int echo3;
-    int motor1;
-    int motor2;
-    int motor3;
+    int vibDisc1;
+    int vibDisc2;
+    int vibDisc3;
     int detectRange;
+    int vibInput1;
+    int vibInput2;
+    int vibInput3;
     volatile long startTimeUsec1;
     volatile long startTimeUsec2;
     volatile long startTimeUsec3;
