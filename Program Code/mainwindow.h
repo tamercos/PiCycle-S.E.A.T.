@@ -7,6 +7,7 @@
 #include <QWidget>
 #include <QScrollBar>
 #include <QCheckBox>
+#include <QLabel>
 
 namespace Ui {
 class MainWindow;
@@ -51,6 +52,7 @@ private:
     QCheckBox *button2;
     QCheckBox *button3;
     QScrollBar *scrollbar;
+    QLabel *sblabel;
 
     // layout elements from Qt itself http://qt-project.org/doc/qt-4.8/classes.html
     QVBoxLayout  *vLayout;  // vertical layout

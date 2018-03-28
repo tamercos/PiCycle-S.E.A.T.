@@ -13,13 +13,13 @@ MainWindow::MainWindow() : detectRange(10), vibInput1(TRUE), vibInput2(TRUE), vi
  /**********************************
   * Assigning widget functionality *
   **********************************/
-    button1 = new QCheckBox("Disable left vibration");
+    button1 = new QCheckBox("Disable left");
     connect( button1, SIGNAL(clicked(bool)), SLOT(setVibInput1(bool)) );
 
-    button2 = new QCheckBox("Disable back vibration");
+    button2 = new QCheckBox("Disable back");
     connect( button2, SIGNAL(clicked(bool)), SLOT(setVibInput2(bool)) );
 
-    button3 = new QCheckBox("Disable right vibration");
+    button3 = new QCheckBox("Disable right");
     connect( button3, SIGNAL(clicked(bool)), SLOT(setVibInput3(bool)) );
 
     scrollbar = new QScrollBar(Qt::Horizontal);
@@ -27,14 +27,20 @@ MainWindow::MainWindow() : detectRange(10), vibInput1(TRUE), vibInput2(TRUE), vi
     scrollbar->setRange(0, 300);
     connect( scrollbar, SIGNAL(valueChanged(int)), SLOT(setDetectRange(int)) );
 
+    sblabel = new QLabel;
+    sblabel->setText("Set detection range (0m-3m)");
 
  /********************
   * set up UI layout *
   ********************/
     vLayout = new QVBoxLayout;
+    vLayout->setContentsMargins(30,60,30,80);
+    vLayout->addWidget(sblabel);
+    sblabel->setAlignment(Qt::AlignCenter);
     vLayout->addWidget(scrollbar);
 
     hLayout = new QHBoxLayout;
+    hLayout->setContentsMargins(10,50,0,0);
     hLayout->addWidget(button1);
     hLayout->addWidget(button2);
     hLayout->addWidget(button3);
