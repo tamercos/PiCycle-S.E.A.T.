@@ -5,17 +5,22 @@ HC-SR04 ultrasonic sensors placed under the seat of the bicycle facing backwards
 
 ![Alt Text](https://media.giphy.com/media/4ZaTwU3GVlwwAR3EJX/giphy.gif)
 
-## Parts used
+## Parts Used
+The list below highlights some of the key hardware needed to replicate this project. Please note that circuit components can be found in the circuit schematic. A full list of this hardware with cost at time of completion is also given in "....."
+
 - 3x HC-SR04 ultrasonic sensors
-- 3x Seeed mini vibration motor 3V 2.0mm circular
+- 3x Seed mini vibration motor 3V 2.0mm circular
 - 3D printed parts found under the "PiCycleSEAT 3D Print" folder
 - 5x M2.5 x 8mm screws for the housing lid
 - 4x M2.5 x 6mm screws for Raspberry Pi
+- 1x Makibes Touch Screen 3.5" Resistive LCD
+- 1x Long pin stack header
+- 1x Perma-proto hat for Raspberry Pi
+- 1x 26 connection ribbon cable
+- 5x 6 Way Straight Pin Header
+- 1x Cable Mount IDC Connector
 
-## Circuitry used
+## Circuitry Used
 ![](https://github.com/tamercos/PiCycleSEAT/blob/master/Schematics/Circuit%20v1.2.PNG)
 
-## Run programme
-`g++ PiCycleSEAT.cpp -o run -lwiringPi libSonar.cpp`
-
-Then `./run`
+## System Diagram
