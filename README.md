@@ -28,3 +28,4 @@ The system is fully powered from the Raspberry Pi.
 ![](https://github.com/tamercos/PiCycleSEAT/blob/master/Schematics/Circuit%20v1.2.PNG)
 
 ## System Diagram
+![](https://github.com/tamercos/PiCycleSEAT/blob/master/Images%20for%20Wiki/Flow%20chart.PNG)
