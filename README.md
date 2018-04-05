@@ -15,7 +15,7 @@ The list below highlights some of the key hardware needed to replicate this proj
 - 4x M2.5 x 6mm screws for Raspberry Pi
 - 1x Makibes Touch Screen 3.5" Resistive LCD
 - 1x Long pin stack header
-- 1x Perma-proto hat for Raspberry Pi
+- 1x Perma-proto hat for Raspberry Pi Adafruit Perma-Proto Pi HAT!
 - 1x 26 connection ribbon cable
 - 5x 6 Way Straight Pin Header
 - 1x Cable Mount IDC Connector
