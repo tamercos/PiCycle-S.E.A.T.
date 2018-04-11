@@ -38,3 +38,5 @@ https://twitter.com/The_PiCycle
 Check out our page and follow us :) 
 
 Enjoy!
+
+# ...Check out our Wiki for more project details and help...
