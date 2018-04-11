@@ -2,7 +2,12 @@
 #include <wiringPi.h>
 #include "libSonar.h"
 
-Sonar::Sonar(){}
+Sonar::Sonar(){
+
+    wiringPiSetup();
+    init(trigger1, echo1, vibDisc1, trigger2, echo2, vibDisc2, trigger3, echo3, vibDisc3);
+
+}
 
 void Sonar::init(int trigger1, int echo1, int vibDisc1, int trigger2, int echo2, int vibDisc2,int trigger3, int echo3, int vibDisc3)
 {
@@ -12,6 +17,7 @@ void Sonar::init(int trigger1, int echo1, int vibDisc1, int trigger2, int echo2,
     this->echo2=echo2;
     this->trigger3=trigger3;
     this->echo3=echo3;
+
     pinMode(trigger1, OUTPUT);			//defining trigger, echo and motor pins as input or output
     pinMode(echo1, INPUT);
     pinMode(vibDisc1, OUTPUT);
@@ -21,6 +27,7 @@ void Sonar::init(int trigger1, int echo1, int vibDisc1, int trigger2, int echo2,
     pinMode(trigger3, OUTPUT);
     pinMode(echo3, INPUT);
     pinMode(vibDisc3, OUTPUT);
+
     digitalWrite(trigger1, LOW);		//ensuring trigger and motor outputs start in inactive state
     digitalWrite(trigger2, LOW);
     digitalWrite(trigger3, LOW);
@@ -28,6 +35,18 @@ void Sonar::init(int trigger1, int echo1, int vibDisc1, int trigger2, int echo2,
     digitalWrite(vibDisc2, LOW);
     digitalWrite(vibDisc3, LOW);
     delay(500);
+}
+
+
+//getters for private variables
+int Sonar::getVibDisc1(){
+    return(vibDisc1);
+}
+int Sonar::getVibDisc2(){
+    return(vibDisc2);
+}
+int Sonar::getVibDisc3(){
+    return(vibDisc3);
 }
 
 
@@ -112,6 +131,7 @@ double Sonar::distance3(int timeout3)
 
     travelTimeUsec3 = endTimeUsec3 - startTimeUsec3;
     distanceMeters3 = 100*((travelTimeUsec3/1000000.0)*340.29)/2;
+
 
     return distanceMeters3;
 }

@@ -35,22 +35,9 @@ public slots:
 
 private:
 
-    //***Decleration of wiringPi pin connections***
-    int trigger1 = 0;
-    int echo1 = 2;
-    int vibDisc1 = 3;
-
-    int trigger2 = 23;
-    int echo2 = 24;
-    int vibDisc2 = 25;
-
-    int trigger3 = 27;
-    int echo3 = 28;
-    int vibDisc3 = 29;
-
-    QCheckBox *button1;
-    QCheckBox *button2;
-    QCheckBox *button3;
+    QCheckBox *checkBox1;
+    QCheckBox *checkBox2;
+    QCheckBox *checkBox3;
     QScrollBar *scrollbar;
     QLabel *sblabel;
 
@@ -58,10 +45,10 @@ private:
     QVBoxLayout  *vLayout;  // vertical layout
     QHBoxLayout  *hLayout;  // horizontal layout
 
-    int detectRange;
-    bool vibInput1;
-    bool vibInput2;
-    bool vibInput3;
+    int detectRange = 10;
+    bool vibInput1 = TRUE;
+    bool vibInput2 = TRUE;
+    bool vibInput3 = TRUE;
 };
 
 #endif // MAINWINDOW_H
