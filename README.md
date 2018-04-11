@@ -32,6 +32,9 @@ The system is fully powered from the Raspberry Pi.
 
 ## Social Media
 We are delighted to share with you our Twitter page. You can follow all of our up to date news on the project there:
+
 https://twitter.com/The_PiCycle
+
 Check out our page and follow us :) 
+
 Enjoy!
