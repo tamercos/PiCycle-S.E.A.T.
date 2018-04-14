@@ -7,6 +7,10 @@ HC-SR04 ultrasonic sensors placed under the seat of the bicycle facing backwards
 
 The system will increase road safety for bicycle users by allowing them to 'feel' what they cannot see behind them. Current solutions rely on wearable mirrors as wrist bands. These force cyclists to take their eyes off the road infront creating more potential dangers. The PiCycle S.E.A.T enables continuous blind spot observation without distracting the cyclist.
 
+**A short video demonstrating the device prototype can be found here:**
+
+https://www.youtube.com/watch?v=8pkJoHdxL40&feature=youtu.be
+
 ## Parts Used
 The list below highlights some of the key hardware needed to replicate this project. Please note that circuit components can be found in the circuit schematic. A full list of this hardware with cost at time of completion is also given in "Project Components and Expenditure.xlsx"
 
